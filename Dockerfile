@@ -9,14 +9,6 @@ RUN wget -q http://www.bacula-web.org/files/bacula-web.org/downloads/bacula-web-
     chmod -R u=rwx,g=rwx,o=rx /var/www/html/application/view/cache && \
     rm -f bacula-web-latest.tgz
 
-ENV DB_TYPE pgsql
-ENV DB_HOST database
-ENV DB_PORT 5432
-ENV DB_NAME bacula-web
-ENV DB_USER bacula-web
-ENV DB_PASS bacula-web
-ENV PHP_TIMEZONE GMT
-
 ADD run.sh /run.sh
 RUN chmod +x /run.sh
 CMD /run.sh
