@@ -11,3 +11,4 @@ The following env variables need to be passed to the container:
 * `DB_USER` Username to authenticate with.
 * `DB_PASS` Password of the database user.
 * `PHP_TIMEZONE` Example: Europe/Berlin
+* `LABEL` Used for catalog selector
