@@ -2,7 +2,7 @@
 
 ### How to run it
 
-The following env variables need to be passed to the container:
+The following environment variables need to be passed to the container:
 
 * `DB_TYPE` Bacula database type.
 * `DB_HOST` Hostname or IP of the database server.
