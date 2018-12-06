@@ -1,6 +1,6 @@
 FROM centos:latest
 
-RUN yum install httpd php php-gd php-gettext php-pgsql php-mysql php-pdo wget tar -y
+RUN yum install httpd php php-gd php-gettext php-pgsql php-mysql php-pdo php-process wget tar -y
 
 RUN wget -q -O bacula-web-latest.tgz http://www.bacula-web.org/files/bacula-web.org/downloads/bacula-web-latest.tgz && \
     tar -xzf bacula-web-latest.tgz -C /var/www/html/ && \
