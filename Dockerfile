@@ -1,6 +1,8 @@
 FROM centos:latest
 
-RUN yum install httpd php php-gd php-gettext php-pgsql php-mysql php-pdo php-process wget tar -y
+RUN yum install httpd php56 php56-php php56-php-cli php56-php-common php56-php-gd php56-php-mbstring php56-php-mcrypt \
+    php56-php-mysqlnd php56-php-pdo php56-php-pear php56-php-pecl-jsonc php56-php-pecl-zip php56-php-process php56-php-xml \
+    php56-runtime wget tar -y
 
 RUN wget -q -O bacula-web-latest.tgz http://www.bacula-web.org/files/bacula-web.org/downloads/bacula-web-latest.tgz && \
     tar -xzf bacula-web-latest.tgz -C /var/www/html/ && \
