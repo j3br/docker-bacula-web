@@ -16,5 +16,6 @@ cat > /var/www/html/application/config/config.php <<EOF
 EOF
 
 echo "date.timezone = $PHP_TIMEZONE" >> /etc/php.ini
+echo "date.timezone = $PHP_TIMEZONE" >> /opt/remi/php56/root/etc/php.ini
 
 /usr/sbin/httpd -D FOREGROUND
