@@ -1,6 +1,10 @@
 FROM centos:latest
 
-RUN yum install httpd php56 php56-php php56-php-cli php56-php-common php56-php-gd php56-php-mbstring php56-php-mcrypt \
+RUN yum -y update && \
+    yum -y install http://rpms.remirepo.net/enterprise/remi-release-7.rpm && \
+    yum clean all
+
+RUN yum install --enablerepo=remi httpd php56 php56-php php56-php-cli php56-php-common php56-php-gd php56-php-mbstring php56-php-mcrypt \
     php56-php-mysqlnd php56-php-pdo php56-php-pear php56-php-pecl-jsonc php56-php-pecl-zip php56-php-process php56-php-xml \
     php56-runtime wget tar -y
 
