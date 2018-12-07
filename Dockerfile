@@ -13,6 +13,7 @@ RUN wget -q -O bacula-web-latest.tgz http://www.bacula-web.org/files/bacula-web.
     chown -R apache /var/www/html/ && \
     chmod -R u=rx,g=rx,o=rx /var/www/html/ && \
     chmod -R u=rwx,g=rwx,o=rx /var/www/html/application/views/cache && \
+    chmod -R u=rwx,g=rx,o=rx /var/www/html/application/assets/protected && \
     rm -f bacula-web-latest.tgz
 
 ADD run.sh /run.sh
